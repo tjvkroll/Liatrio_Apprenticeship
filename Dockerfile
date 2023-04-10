@@ -9,7 +9,7 @@ COPY package*.json ./appreticeship/interview.js ./
 RUN npm install
 
 # exposing port 8000 to the host network 
-EXPOSE 8000
+EXPOSE 80
 
 # run my interview.js using node upon running the container
 CMD ["node", "interview.js"]
