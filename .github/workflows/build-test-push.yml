@@ -13,6 +13,9 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag interview:$(date +%s)
+
+    - name: Run Docker Container
+      run: docker run --rm -it --init -p 80:80 interview:$(date +%s)
   
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
