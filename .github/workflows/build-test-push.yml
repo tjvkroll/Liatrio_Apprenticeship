@@ -1,0 +1,21 @@
+name: build-test-push
+
+on:
+  push:
+
+jobs:
+
+  build-test-push:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag interview:$(date +%s)
+  
+    - name: run tests
+      uses: liatrio/github-actions/apprentice-action@master
+      
+    #- name: push to dockerhub
+      
