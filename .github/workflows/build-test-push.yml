@@ -12,10 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag interview:$(date +%s)
+      run: docker build . --file Dockerfile --tag interview
 
     - name: Run Docker Container
-      run: docker run --rm --init -p 80:80 interview:$(date +%s)
+      run: docker run --rm --init -p 80:80 interview
   
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
