@@ -6,8 +6,8 @@ app.get('/', (req, res)=>{
     // Building my json object to respond to the GET with
     res.json({
         "message": "My name is Travis Kroll",
-        "timestamp": Date.now()
-        "new": "howdy"
+        "timestamp": Date.now(),
+        "new": "howdy",
     }); 
 }); 
 
