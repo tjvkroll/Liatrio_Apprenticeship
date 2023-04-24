@@ -7,7 +7,7 @@ app.get('/', (req, res)=>{
     res.json({
         "message": "My name is Travis Kroll",
         "timestamp": Date.now(),
-        "new": "Love you long time",
+        "new": "Hello world",
     }); 
 }); 
 
